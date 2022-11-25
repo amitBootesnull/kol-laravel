@@ -60,6 +60,7 @@ class AnnouncementController extends Controller
                     }else{
                         //add  announcement
                         $addAnnouncement = $this->userService->AddAnnouncement($request,$userId,$profileId['id']);
+                        
                         $msg=__("api_string.announcement_added");
                         return response()->json(["status"=>true,'statusCode'=>201,"message"=>$msg]);     
                     }
